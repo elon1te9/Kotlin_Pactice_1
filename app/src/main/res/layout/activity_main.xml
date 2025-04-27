@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="224dp"
+        android:text="324 и 34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Сложить"
+        app:layout_constraintEnd_toEndOf="@+id/tvRes"
+        app:layout_constraintStart_toStartOf="@+id/tvRes"
+        app:layout_constraintTop_toBottomOf="@+id/tvRes" />
+
+    <Button
+        android:id="@+id/bRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Отнять"
+        app:layout_constraintEnd_toEndOf="@+id/bSum"
+        app:layout_constraintStart_toStartOf="@+id/bSum"
+        app:layout_constraintTop_toBottomOf="@+id/bSum" />
+
+    <Button
+        android:id="@+id/bMult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Умножить"
+        app:layout_constraintEnd_toEndOf="@+id/bRest"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/bRest"
+        app:layout_constraintTop_toBottomOf="@+id/bRest" />
+</androidx.constraintlayout.widget.ConstraintLayout>

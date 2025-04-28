@@ -13,8 +13,8 @@ import com.example.test3.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var bindingClass: ActivityMainBinding
-    val a = 324
-    val b = 34
+    val maxPerson = 90
+    val currentPerson = 91
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,17 +22,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(bindingClass.root)
 
         bindingClass.bSum.setOnClickListener {
-            val result = a + b
-            bindingClass.tvRes.text = result.toString()
+            when(currentPerson){
+
+                in 0..maxPerson -> bindingClass.tvRes.text = "Окей"
+                else -> bindingClass.tvRes.text = "Не окей"
+            }
         }
         bindingClass.bRest.setOnClickListener {
-            val result = a-b
-            bindingClass.tvRes.text = "Результат вычитания равен: $result"
+
         }
         bindingClass.bMult.setOnClickListener {
-            val result = a*b
-            bindingClass.tvRes.text = "Результат умножения равен: $result"
-        }
 
+        }
     }
 }
